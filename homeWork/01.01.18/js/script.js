@@ -22,4 +22,17 @@ let Person = {
     }  
 }
 
+// 2. when we return an object there is a diference between the 2 methods because javascript
+//      automaticaly asigns a semicolon (;) if a return statement doesnt have any more code on that line. 
+//      example: 
+//  
+//  1. good -    return {
+//                          something:something // this one works 
+//                      }
+
+//  2. bad -    return 
+//              {
+//                  something;something // ERROR 
+//              }
+
 
