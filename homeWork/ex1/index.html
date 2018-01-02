@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/foundation.min.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="grid-x">        
+            <div class="small-6 large-offset-3 cell">
+                <div class="form-wrapper">
+                    <form>
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" value="">
+
+                        <label for="age">Age: </label>
+                        <input type="text" name="age" value="">
+
+                        <label for="birthday">Birthday: </label>
+                        <input type="text" name="birthday" value="">
+
+                        <label for="color">Color: </label>
+                        <input type="color" name="color" >
+
+                        <button type="button" class="button success" onclick="EX1.addUser()">submit</button>
+                    </form>
+                </div>
+            </div>     
+        </div>
+        <div class="grid-x">
+            <div class="small-12 cell">
+                <div class="grid-x users-wrapper" id='users'>
+
+                </div>
+            </div>
+        </div>
+           
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/what-input.js"></script>
+        <script src="js/vendor/foundation.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
