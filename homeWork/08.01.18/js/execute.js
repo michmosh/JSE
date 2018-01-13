@@ -11,10 +11,13 @@ function executeActions(obj){
 for(let i = 0; i<10 ; i++){
     let obj;
     if(i % 2 === 0 ){
-        obj = new Laptop(1,2,950,4,true,12);
+        obj = new Laptop(5,4,"Intel",950,4,4,90,true);
     }
     else{
-        obj = new Computer(1,2,950,4);
+        obj = new Desktop(5,4,"Asos",950,2,true,16);
     }
     executeActions(obj);
 }
+
+//procesorMemeory, diskMemory , processorModel , price, liability, batteryHours, batteryPrec ,touchScreen
+//procesorMemeory, diskMemory , processorModel , price, liability, wirless, screenSize
