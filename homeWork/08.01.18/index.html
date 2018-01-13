@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+</head>
+
+<body>
+    <script>
+        function Dog(name){
+            this.name = name; 
+        }
+
+        Dog.Prototype={
+            dogFunc:()=>{alert("hello")}
+        }
+        Dog.prototype.constructor = Dog;
+
+        function Person(name){
+            this.name = name; 
+        }
+
+        function Student(title){
+            this.title = title; 
+            Person.call(this,name);
+        }
+        
+        Student.prototype = Object.create(Person.prototype); // why is this here ?
+        Student.prototype.constructor = Student; // why is this here ?
+        let s1 = new Student('moshe');
+        console.log(s1.constructor)     
+    </script>
+</body>
+
+</html>
+
