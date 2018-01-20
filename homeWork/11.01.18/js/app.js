@@ -12,11 +12,10 @@ let checkDate = function(){
     })
     .catch( (reason)=>{
         console.log( reason +':' ,'Lets try again') ;
-        checkDate(checkDate);
+        checkDate();
         
     })
 }
-
 
 checkDate();
     
