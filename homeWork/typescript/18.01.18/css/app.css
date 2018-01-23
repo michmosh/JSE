@@ -1,0 +1,27 @@
+body {
+  padding: 5rem;
+}
+
+.divi {
+  width: 30%;
+  height: 10rem;
+  background-color: green;
+  margin: -4px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10rem;
+}
+
+.divi:nth-child(even) {
+  background-color: blue;
+}
+
+.divi:nth-child(odd) {
+  background-color: red;
+}
+
+.divi:before {
+  content: "1";
+}
+/*# sourceMappingURL=app.css.map */
