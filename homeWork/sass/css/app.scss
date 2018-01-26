@@ -1,0 +1,46 @@
+$color : #d7bde2;
+$black :black;
+$width:33%; 
+body{
+   padding:5rem;
+}
+ul{
+    border:1px solid transparent;
+    border-radius: 125px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin:0 auto;
+    max-width: 50%;
+    .li{
+        width:$width;
+        flex-grow: 1;
+        background-color: $color;
+        margin:-4px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 10rem;
+        font-size: 5em;
+        list-style: none;
+        padding:3% 0;
+        &:nth-child(even){
+            background-color: $color;
+            color:$black;
+        }
+        &:nth-child(odd){
+            background-color: $black;
+            color:$color;
+        }
+        @for $i from 1  through  9 {
+            &:nth-child(#{$i}){
+                &:before{ 
+                    content: "" + $i;
+
+                }
+            }
+        
+        }
+    }
+   
+}
