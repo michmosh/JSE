@@ -1,3 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+// ex1
+var ex_1 = require("./ex");
+console.log(ex_1.execOperations(undefined, 3.1, 7.9, 8.5));
+var sqrVal = function (num) {
+    return num * num;
+};
+console.log(ex_1.execOperations(sqrVal, 4, 7, 8));
+//matrix
 var num = Number(prompt(" number ? "));
 var mat1 = [];
 var mat;

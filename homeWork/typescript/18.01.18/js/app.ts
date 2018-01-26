@@ -1,3 +1,12 @@
+// ex1
+import {execOperations} from './ex';
+
+console.log(execOperations(undefined,3.1,7.9,8.5));
+let sqrVal = function(num:number):number{
+    return num * num;
+}
+console.log(execOperations(sqrVal,4,7,8));
+//matrix
 let num:number = Number(prompt(" number ? "));
 let mat1 :Array<Array<string>> = [];
 enum mat {
