@@ -7,14 +7,14 @@ import {PizzasService} from '../shared/services/pizzas.service';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  displayedColumns:Array<string> = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns:Array<string> = ['id', 'size', 'toppings', 'price'];
   data:Array<any> = [];
   dataSource:MatTableDataSource<any>;
  
   constructor(private service: PizzasService) { }
 
   ngOnInit() {
-    this.data = this.service.getPizzas();
+    this.data = this.service.getOrders();
     this.dataSource = new MatTableDataSource<any>(this.data);
   }
 
