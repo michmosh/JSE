@@ -1,0 +1,35 @@
+/* header{
+    border-bottom: 1px solid black;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    background-color: burlywood;
+    padding:0.5rem;
+    width: 100%;
+}
+.navbar-fixed-top{
+     position: sticky;
+    z-index: 1;
+    width: 100%;
+}
+.user-details{
+    display: flex;
+    flex-direction: row-reverse;
+    vertical-align: middle;
+    line-height: 3rem;
+}
+ */
+.nav-color{
+    background-color: burlywood;
+    border-color: burlywood;
+ }
+li.user-details img{
+    padding-top:0;
+    padding-bottom: 0;
+}
+
+.nav-left-links{
+    margin-top: 0.5rem;
+    margin-right:0.5rem;
+    margin-left: 0.5rem;
+}

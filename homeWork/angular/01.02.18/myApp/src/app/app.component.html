@@ -1,0 +1,8 @@
+<app-header [config]="appData" (onLoginOrRegister)="onRegisterLogin($event)"></app-header>
+
+<div class="container-fluid" [ngSwitch]="title">
+  <app-main *ngSwitchDefault></app-main>
+</div>
+<app-footer [config]="config"></app-footer>
+
+

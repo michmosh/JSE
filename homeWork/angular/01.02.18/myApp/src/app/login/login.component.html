@@ -1,0 +1,19 @@
+
+<button class="btn btn-success" (click)="openModal(template)">Login</button>
+    <ng-template #template>
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">Register</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal">
+                <label for="email">Email :</label>
+                <input class="form-control" type="text"  name="email" >
+                <label for="password">Password :</label>
+                <input class="form-control" type="text"  name="password" >
+              <button class="btn btn-primary" (click)="verifyUser()">login</button>
+            </form>
+        </div>
+      </ng-template>

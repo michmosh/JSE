@@ -1,0 +1,25 @@
+
+    <button class="btn btn-primary" (click)="openModal(template)">Register</button>
+    <ng-template #template>
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">Register</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal">
+                <label for="firstName">first name :</label>
+                <input class="form-control" type="text" [(ngModel)]="newUser.firstName" name="firstName" >
+                <label for="lastName">last name :</label>
+                <input class="form-control" type="text" [(ngModel)]="newUser.lastName" name="lastName" >
+                <label for="age">age :</label>
+                <input class="form-control" type="text" [(ngModel)]="newUser.age" name="age" >
+                <label for="country">country :</label>
+                <app-dropdown (selectedCountry)="selectCountry($event)" ></app-dropdown>
+                <div class="form-group"></div>
+                <button type="button" class="btn btn-primary" (click)="register()">Register</button>
+              </form>
+        </div>
+      </ng-template>
+
