@@ -1,0 +1,55 @@
+
+    <button class="btn btn-primary" (click)="openModal(template)">Register</button>
+    <ng-template #template>
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">Register</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" [formGroup]="registerForm" (ngSubmit)="register()" >
+                <label for="email">Email :</label>
+                <input #email formControlName="email" class="form-control" type="text"  name="email" >
+                <div class="spacer">
+                    <app-error [control]="registerForm.controls['email']"></app-error>
+                </div>
+
+                <label for="firstName">first name :</label>
+                <input formControlName="firstName" class="form-control" type="text" name="firstName" >
+                <div class="spacer">
+                    <app-error [control]="registerForm.controls['firstName']"></app-error>
+                </div>
+
+                <label for="lastName">last name :</label>
+                <input formControlName="lastName" class="form-control" type="text"  name="lastName" >
+                <div class="spacer">
+                    <app-error [control]="registerForm.controls['lastName']"></app-error>
+                </div>
+
+                <label for="password">Password :</label>
+                <input formControlName="password" class="form-control" type="text" name="password" >
+                <div class="spacer">
+                    <app-error [control]="registerForm.controls['password']"></app-error>
+                </div>
+
+                <label for="age">age :</label>
+                <input formControlName="age" class="form-control" type="text" name="age" >
+                <div class="spacer">
+                    <app-error [control]="registerForm.controls['age']"></app-error>
+                </div>
+
+                <label for="country">country :</label>
+                <input formControlName="country" class="form-control hidden" type="text"  name="country" >
+                <div class="spacer">
+                    <app-error  [control]="registerForm.controls['country']" [buttonPresed]="buttonPressed"></app-error>
+                </div>
+                <app-dropdown (selectedCountry)="selectCountry($event)" ></app-dropdown>
+                
+                <div class="form-group"></div>
+                <button type="Submit" class="btn btn-primary" >Register</button>
+               
+              </form>
+        </div>
+      </ng-template>
+

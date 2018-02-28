@@ -1,0 +1,13 @@
+<div class="col-md-3 col-sm-6">
+    <a [routerLink]="['/products/',previewBook.id]">
+      <div class="thumbnail">
+        <img [src]="previewBook.volumeInfo.imageLinks.smallThumbnail" alt="{{previewBook.volumeInfo.title}}" class="book-img">
+        <div class="caption">
+          <h4>Title : {{previewBook.volumeInfo.title | strPipe: titleLength}}</h4>
+          <p>Author : {{previewBook?.volumeInfo?.authors? previewBook.volumeInfo.authors[0] : 'unknown' }}</p>
+          <p app-currency [symbol]="previewBook.saleInfo?.listPrice?.symbol" > Original Currency : </p>
+          <p app-price [amount]="previewBook.saleInfo?.listPrice?.amount" > Price : </p>
+        </div>
+      </div>
+    </a>
+  </div>
